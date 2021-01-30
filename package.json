@@ -1,0 +1,29 @@
+{
+  "name": "car-charity",
+  "version": "1.0.0",
+  "description": "662 of 1000 Luxembourgers don't have a car. Help us give one to the other 338, too!",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedus/car-charity.git"
+  },
+  "author": "Federico Gentile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedus/car-charity/issues"
+  },
+  "homepage": "https://github.com/fedus/car-charity#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-bro": "^2.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "alpinejs": "^2.8.0"
+  }
+}

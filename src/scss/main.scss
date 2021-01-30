@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .bg-intro {
+      position: relative;
+      /* Full height */
+      height: 100%;
+
+      background: linear-gradient( rgba(66, 35, 241, 0.45), rgba(158, 239, 225, 0.45)), no-repeat center/cover url("../images/car_traffic.jpg");
+  }
+
+  .bg-outro {
+      position: relative;
+
+      /* Full height */
+      height: 100%;
+
+      background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 50% 0%/cover url("../images/car_hug.jpg")
+  }
+
+  .intro-text {
+      text-align: center;
+      display: inline-block;
+      font-size: 3em;
+      background-color: white;
+      mix-blend-mode: screen;
+      font-family: Arial;
+      font-weight: 1000;
+      text-transform: uppercase;
+      padding: 1%;
+      position: absolute;
+      bottom: 25%;
+      left: 30%;
+  }
+
+  .outro-text {
+      text-align: center;
+      display: inline-block;
+      font-size: 3em;
+      background-color: white;
+      mix-blend-mode: screen;
+      font-family: Arial;
+      font-weight: 1000;
+      text-transform: uppercase;
+      padding: 1%;
+      position: absolute;
+      right: 10%;
+      top: 20%;
+  }
+
+  .number {
+      font-size: 2em;
+  }
