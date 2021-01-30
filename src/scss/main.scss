@@ -17,37 +17,56 @@ body, html {
     /* Full height */
     height: 100%;
 
-    background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 50% 0%/cover url("../images/car_hug.jpg")
+    background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 50% 0%/cover url("../images/car_hug.jpg");
+
+    @media screen and (max-width: 700px) {
+        background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 35% 0%/cover url("../images/car_hug.jpg");
+    }
+}
+
+.intro-outro-text {
+    text-align: center;
+    display: inline-block;
+    font-size: 3em;
+    background-color: white;
+    mix-blend-mode: screen;
+    font-family: Arial;
+    font-weight: 1000;
+    text-transform: uppercase;
+    padding: 1%;
+    position: absolute;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2,1.2)
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.5em;
+    }
 }
 
 .intro-text {
-    text-align: center;
-    display: inline-block;
-    font-size: 3em;
-    background-color: white;
-    mix-blend-mode: screen;
-    font-family: Arial;
-    font-weight: 1000;
-    text-transform: uppercase;
-    padding: 1%;
-    position: absolute;
     bottom: 25%;
     left: 30%;
+
+    @media screen and (max-width: 700px) {
+        left: unset;
+        bottom: 15%;
+        right: 10%;
+    }
 }
 
 .outro-text {
-    text-align: center;
-    display: inline-block;
-    font-size: 3em;
-    background-color: white;
-    mix-blend-mode: screen;
-    font-family: Arial;
-    font-weight: 1000;
-    text-transform: uppercase;
-    padding: 1%;
-    position: absolute;
     right: 10%;
     top: 20%;
+
+    @media screen and (max-width: 700px) {
+        right: unset;
+        top: unset;
+        left: 10%;
+        bottom: 25%;
+    }
 }
 
 .number {
