@@ -1,26 +1,35 @@
 body, html {
     height: 100%;
     margin: 0;
-  }
-
-.bg-intro {
-    position: relative;
-    /* Full height */
-    height: 100%;
-
-    background: linear-gradient( rgba(66, 35, 241, 0.45), rgba(158, 239, 225, 0.45)), no-repeat center/cover url("../images/car_traffic.jpg");
 }
 
-.bg-outro {
+.bg-intro-outro {
     position: relative;
-
     /* Full height */
     height: 100%;
 
-    background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 50% 0%/cover url("../images/car_hug.jpg");
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: auto, cover;
+    background-origin: padding-box, padding-box;
+    background-clip: border-box, border-box;
 
-    @media screen and (max-width: 700px) {
-        background: linear-gradient( rgba(186, 17, 146, 0.50), rgba(254, 199, 108, 0.50)), no-repeat 35% 0%/cover url("../images/car_hug.jpg");
+    &.bg-intro {
+        background-position-x: 0%, center;
+        background-position-y: 0%, center;
+        background-image: linear-gradient(rgba(66, 35, 241, 0.45), rgba(158, 239, 225, 0.45)), url("../images/car_traffic.jpg");
+
+    }
+
+    &.bg-outro {
+        background-position-x: 0%, center;
+        background-position-y: 0%, 0%;
+        background-image: linear-gradient(rgba(186, 17, 146, 0.5), rgba(254, 199, 108, 0.5)), url("../images/car_hug.jpg");
+
+        @media screen and (max-width: 700px) {
+            background-position-x: 0%, 35%;
+        }
     }
 }
 

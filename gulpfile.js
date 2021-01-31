@@ -13,18 +13,20 @@ const browserSync = require('browser-sync').create();
 
 function _build_js() {
     // take every commonJS module, browserify them and put them into ./dist/js
-    src('./src/cjs-modules/*.js')
+    const cjsPromise = src('./src/cjs-modules/*.js')
         .pipe(bro())
         .pipe(dest('./dist/js'));
 
     // take every JS script, and put them into ./dist/js
-    src('./src/scripts/**/*.js')
+    const jsPromise = src('./src/scripts/**/*.js')
         .pipe(dest('./dist/js'));
+
+    return Promise.all([cjsPromise, jsPromise]);
 }
 
 function _build_css() {
     // take CSS and put them into ./dist/css
-    src('./src/**/*.css')
+    return src('./src/**/*.css')
         .pipe(dest('./dist/css'))
         .pipe(browserSync.stream());
 }
@@ -38,13 +40,13 @@ function _build_sass() {
 
 function _build_assets() {
     // take every image, and put them into ./dist/images
-    src('./src/images/**/*')
+    return src('./src/images/**/*')
         .pipe(dest('./dist/images'));
 }
 
 function _build_html() {
     // take every HTML and put them into ./dist
-    src('./src/**/*.html')
+    return src('./src/**/*.html')
         .pipe(dest('./dist'));
 }
 
