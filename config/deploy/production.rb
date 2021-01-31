@@ -6,8 +6,8 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
-
+server "krawallendapp", user: "deploy", roles: %w{web}
+set :branch, 'main'
 
 # role-based syntax
 # ==================
@@ -59,3 +59,8 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+namespace :deploy do
+    after 'deploy:started', 'locally:build'
+    before "deploy:updated", "deploy:set_permissions:chmod"
+end
