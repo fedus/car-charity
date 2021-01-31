@@ -46,7 +46,7 @@ namespace :locally do
     task :build do
         run_locally do
             execute :npm, :install
-            execute :npm, :build
+            execute :npm, :run, :build
         end
     end
 end
